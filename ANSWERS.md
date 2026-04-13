@@ -2,22 +2,17 @@
 
 ## Exercice 1 — Cartographie
 
-### 1.1 Classes et interfaces publiques
-
-(Listez ici)
-
-### 1.2 Graphe de dependances
-
-(Decrivez ou collez un schema)
 
 ### 1.3 Clusters identifies
 
-- Cluster 1 : ...
-  - Justification : ...
-- Cluster 2 : ...
-  - Justification : ...
-- Cluster 3 : ...
-  - Justification : ...
+On va opter pour une architecture monotlithique modulaire. On va donc séparer notre code en 3 clusters de fonctionnalités
+
+- Cluster 1 : Billing
+  - Justification : va rassembler toutes les fonctionnalités liées à la gestion des paiements
+- Cluster 2 : Housekeeping
+  - Justification : va rassembler les fonctionnalités liées au nettoyage des rooms après le passage des clients
+- Cluster 3 : Booking
+  - Justification : pour gérer les réservations
 
 ---
 
@@ -28,6 +23,8 @@
 | Module | Justification |
 |-------|---------------|
 | ... | ... |
+
+On a rassemblé chaque cluster dans un module
 
 ### Justification par principe
 
