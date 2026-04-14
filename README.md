@@ -55,10 +55,11 @@ Un module doit etre coherent : tout ce qu'il contient a du sens ensemble.
 
 ## Le code de depart
 
-Ouvrez `src/Hotel.sln`. Le code est bien structure en classes (SOLID respecte), mais tout vit dans **un seul projet**. Executez :
+Ouvrez `Hotel.sln` a la racine du depot. Les modules vivent sous `Hotel/` : `Booking.Contracts` (contrats partages), `Booking`, `Billing`, `HouseKeeping`, `Common`, et `Runner` (composition root). Chaque assembly a son propre espace de noms (`Hotel.Booking.Contracts`, `Hotel.Billing`, etc.). Executez :
 
 ```bash
-dotnet run --project src/Hotel
+dotnet build
+dotnet run --project Hotel/Runner/Hotel.Runner.csproj
 ```
 
 ### Constat
@@ -99,7 +100,7 @@ Reorganisez le code en **plusieurs projets .NET** (assemblies distinctes).
 ### Contraintes a verifier
 
 - [ ] `dotnet build` compile sans erreur
-- [ ] `dotnet run --project Hotel.Runner` produit le meme output
+- [ ] `dotnet run --project Hotel/Runner/Hotel.Runner.csproj` produit le meme output
 - [ ] Aucune classe `internal` n'est accessible depuis un autre projet
 - [ ] Les `.csproj` des modules metier ne se referencent pas entre eux (sauf via Contracts)
 

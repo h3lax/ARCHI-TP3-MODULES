@@ -1,0 +1,12 @@
+global using Hotel.Booking.Application;
+global using Hotel.Booking.Contracts;
+global using Hotel.Booking.Infrastructure;
+global using Hotel.Billing.Invoicing;
+global using Hotel.Billing.Pricing;
+global using Hotel.Billing.Tax;
+global using Hotel.Common.Messaging;
+global using Hotel.HouseKeeping.Abstractions;
+global using Hotel.HouseKeeping.Domain;
+global using Hotel.HouseKeeping.Policies;
+global using Hotel.HouseKeeping.Scheduling;
+global using Hotel.Runner.Adapters;
